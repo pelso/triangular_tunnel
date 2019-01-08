@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="triangular tunnel">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Practice JavaScript by drawing</title>
+</head>
+<body>
+<canvas id="myCanvas" height="300" width="450" style="border: 1px solid black"></canvas>
+<script>
+	
+var canvas = document.getElementById('myCanvas');
+var context = canvas.getContext('2d');
+
+var x = 70;
+var y = 0;
+var cw = 450;
+var ch = 300;
+
+for (var i = 0; i < 30; i++) {
+context.beginPath();
+context.moveTo(x + 100, y + 20);
+context.lineTo(x + 150, y + 120);
+context.lineTo(x + 50, y + 120);
+context.lineTo(x + 100, y + 20);
+context.strokeStyle = "grey";
+context.stroke(); 
+  
+  x = x + 5;
+  y = y + 5;
+  
+}
+	
+</script>
+</body>
+</html>
